@@ -404,7 +404,7 @@ section { scroll-margin-top: 16px; }
   var LIMIT = 9, expanded = false, current = 'all';
 
   var updated = list.getAttribute('data-updated');
-  if (updated) document.getElementById('updated').textContent = 'Updated automatically · ' + updated;
+  document.getElementById('updated').textContent = 'Updates automatically with new work';
 
   function matches(li, f) {
     if (f === 'all') return true;
