@@ -1,0 +1,126 @@
+{
+  "_help": "Pinned clips you add by hand. These always show, even if no feed finds them. type is one of: review, guide, feature, broadcast. topics can include: robot. date is optional (YYYY-MM-DD); leave it out for buying guides that get updated.",
+  "clips": [
+    {
+      "title": "The best robot lawn mowers, as tested by our experts",
+      "url": "https://www.gardenersworld.com/reviews/lawn-care/best-robotic-mowers/",
+      "outlet": "BBC Gardeners' World Magazine",
+      "type": "guide",
+      "topics": ["robot"]
+    },
+    {
+      "title": "Husqvarna Automower 308V review",
+      "url": "https://www.t3.com/home-living/garden/husqvarna-automower-308v-review-effortless-lawn-care-if-your-wi-fi-can-keep-up",
+      "outlet": "T3",
+      "type": "review",
+      "topics": ["robot"],
+      "date": "2026-04-15"
+    },
+    {
+      "title": "eufy C15 robot lawnmower review",
+      "url": "https://www.trustedreviews.com/reviews/eufy-c15-robot-lawn-mower",
+      "outlet": "Trusted Reviews",
+      "type": "review",
+      "topics": ["robot"]
+    },
+    {
+      "title": "Robotic lawnmowers: do they save time without hassling hedgehogs?",
+      "url": "https://pocketcasts.com/podcast/sliced-bread/ce09e9d0-0c60-0137-f265-1d245fc5f9cf/sliced-bread-series-17-robotic-lawnmowers/a0fd9aaa-bf3c-4db6-863f-ce5df483035b",
+      "outlet": "BBC Radio 4, Sliced Bread",
+      "type": "broadcast",
+      "topics": ["robot"]
+    },
+    {
+      "title": "Excellence in Forestry Awards 2026: five profiles of the winners",
+      "url": "https://rfs.org.uk/about-us/rfs-awards/excellence-in-forestry-awards/",
+      "outlet": "Royal Forestry Society",
+      "type": "feature",
+      "topics": [],
+      "date": "2026-10-15"
+    },
+    {
+      "title": "The 12 best cordless lawn mowers, tested and rated",
+      "url": "https://www.gardenersworld.com/reviews/lawn-care/best-cordless-lawn-mowers/",
+      "outlet": "BBC Gardeners' World Magazine",
+      "type": "guide",
+      "topics": []
+    },
+    {
+      "title": "Webb 40V self-propelled lawnmower review",
+      "url": "https://www.t3.com/home-living/garden/webb-wev20x2lm47spb4x-40v-lawnmower-review-this-heavyweight-mower-takes-the-hard-work-out-of-cutting-grass",
+      "outlet": "T3",
+      "type": "review",
+      "topics": []
+    },
+    {
+      "title": "STIHL FSA 50 cordless grass trimmer review",
+      "url": "https://www.trustedreviews.com/reviews/stihl-fsa-50-cordless-grass-trimmer",
+      "outlet": "Trusted Reviews",
+      "type": "review",
+      "topics": []
+    },
+    {
+      "title": "Husqvarna 122iB leaf blower review",
+      "url": "https://www.trustedreviews.com/reviews/husqvarna-122ib",
+      "outlet": "Trusted Reviews",
+      "type": "review",
+      "topics": []
+    },
+    {
+      "title": "The best leaf blowers, as tested by our expert reviewers",
+      "url": "https://www.gardenersworld.com/reviews/tools/power-tools/best-leaf-blowers-vacuums/",
+      "outlet": "BBC Gardeners' World Magazine",
+      "type": "guide",
+      "topics": []
+    },
+    {
+      "title": "The best hedge trimmers, tested in real-world conditions",
+      "url": "https://www.gardenersworld.com/reviews/tools/power-tools/best-hedge-trimmers/",
+      "outlet": "BBC Gardeners' World Magazine",
+      "type": "guide",
+      "topics": []
+    },
+    {
+      "title": "The best lawn scarifiers to buy",
+      "url": "https://www.gardenersworld.com/reviews/lawn-care/the-best-lawn-scarifiers-from-manual-to-mechanical-machines-2/",
+      "outlet": "BBC Gardeners' World Magazine",
+      "type": "guide",
+      "topics": []
+    },
+    {
+      "title": "The best grass trimmers",
+      "url": "https://www.gardenersworld.com/reviews/lawn-care/best-grass-trimmers/",
+      "outlet": "BBC Gardeners' World Magazine",
+      "type": "guide",
+      "topics": []
+    },
+    {
+      "title": "The best lawn mowers, tested and rated",
+      "url": "https://www.gardenersworld.com/reviews/lawn-care/best-lawn-mowers/",
+      "outlet": "BBC Gardeners' World Magazine",
+      "type": "guide",
+      "topics": []
+    },
+    {
+      "title": "The best pressure washers, as actually tested",
+      "url": "https://www.gardenersworld.com/reviews/tools/power-tools/pressure-washers-buyers-guide/",
+      "outlet": "BBC Gardeners' World Magazine",
+      "type": "guide",
+      "topics": []
+    },
+    {
+      "title": "The best garden shredders",
+      "url": "https://www.gardenersworld.com/reviews/tools/power-tools/the-best-shredders/",
+      "outlet": "BBC Gardeners' World Magazine",
+      "type": "guide",
+      "topics": []
+    },
+    {
+      "title": "Flymo EasiLife Go 500 robotic mower review",
+      "url": "https://www.gardenersworld.com/reviews/flymo-easilife-go-500-review/",
+      "outlet": "BBC Gardeners' World Magazine",
+      "type": "review",
+      "topics": ["robot"]
+    }
+  ]
+}

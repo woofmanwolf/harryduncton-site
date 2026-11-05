@@ -1,0 +1,23 @@
+{
+  "_help": "Feeds checked every morning. Add your Google Alert RSS link below (see README, step 5). byline_only: true means every item in the feed is yours (an author feed). false means it's a search-style feed, so items are only kept if they mention your name.",
+  "name": "Harry Duncton",
+  "allow_domains": [
+    "gardenersworld.com",
+    "t3.com",
+    "trustedreviews.com",
+    "granddesignsmagazine.com",
+    "stuff.tv",
+    "bbc.co.uk",
+    "theguardian.com",
+    "telegraph.co.uk",
+    "independent.co.uk",
+    "thetimes.com",
+    "rfs.org.uk"
+  ],
+  "feeds": [
+    {
+      "url": "PASTE_YOUR_GOOGLE_ALERT_RSS_LINK_HERE",
+      "byline_only": false
+    }
+  ]
+}

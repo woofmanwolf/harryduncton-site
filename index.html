@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harry Duncton | Robot lawnmower and garden tech journalist</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Harry Duncton is a freelance home and garden technology journalist in Devon, specialising in robot lawnmowers. Writes for BBC Gardeners' World Magazine, T3, Trusted Reviews and Grand Designs Magazine.">
+<link rel="canonical" href="https://www.harryduncton.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.harryduncton.com/">
+<meta property="og:title" content="Harry Duncton, home and garden technology journalist">
+<meta property="og:description" content="Robot lawnmower specialist. Writes for BBC Gardeners' World Magazine, T3, Trusted Reviews and Grand Designs Magazine. BBC Radio 4's robot mower expert on Sliced Bread.">
+<meta property="og:image" content="https://www.harryduncton.com/og-image.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2F5E3B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232F5E3B'/%3E%3Cpath d='M0 8h32v4H0zM0 20h32v4H0z' fill='%233B7049'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' text-anchor='middle' fill='%23F2F5F2'%3EHD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Harry Duncton",
+  "url": "https://www.harryduncton.com/",
+  "jobTitle": "Freelance home and garden technology journalist",
+  "email": "mailto:harry@harryduncton.com",
+  "address": {"@type": "PostalAddress", "addressLocality": "Exeter", "addressRegion": "Devon", "addressCountry": "GB"},
+  "knowsAbout": ["Robot lawnmowers", "Garden power tools", "Smart home technology", "Consumer technology reviews"],
+  "sameAs": [
+    "https://www.instagram.com/beard.reviews.tech",
+    "https://www.youtube.com/@beard.reviews",
+    "https://www.t3.com/author/harry-duncton",
+    "https://www.gardenersworld.com/author/harryduncton"
+  ]
+}
+</script>
+<style>
+/* Layout: a mown-lawn hero beside a review "spec box", then sections on a single column grid that splits to two on wide screens. */
+:root {
+  --paper: #F2F5F2;
+  --paper-2: #E3ECE6;
+  --ink: #15211C;
+  --ink-2: #4B5C54;
+  --rule: #C7D4CC;
+  --grass: #2F5E3B;
+  --duck: #C4DCD6;
+  --signal: #C8430E;
+  --stripe: rgba(47, 94, 59, 0.07);
+  --display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --wrap: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0F1714; --paper-2: #16221D; --ink: #E5EEE8; --ink-2: #A0B2A9;
+    --rule: #2B3B34; --grass: #86C192; --duck: #22403B; --signal: #FF8048;
+    --stripe: rgba(134, 193, 146, 0.06); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0F1714; --paper-2: #16221D; --ink: #E5EEE8; --ink-2: #A0B2A9;
+  --rule: #2B3B34; --grass: #86C192; --duck: #22403B; --signal: #FF8048;
+  --stripe: rgba(134, 193, 146, 0.06); color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--body); font-size: 1.0625rem; line-height: 1.6;
+  font-optical-sizing: auto;
+}
+img { max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; border-radius: 2px; }
+.wrap {
+  max-width: var(--wrap); margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+h1, h2, h3 { font-family: var(--display); font-stretch: 112%; line-height: 1.08; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.7rem, 3.6vw, 2.5rem); font-weight: 760; }
+h3 { font-size: 1.15rem; font-weight: 700; font-stretch: 105%; }
+p { margin: 0; max-width: 65ch; }
+.label {
+  font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--ink-2);
+}
+.skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: var(--paper); padding: 8px 12px; z-index: 20; }
+.skip:focus { left: max(16px, env(safe-area-inset-left, 0px)); }
+
+/* Header */
+.site-head { border-bottom: 1px solid var(--rule); }
+.site-head .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px; padding-block: 18px; }
+.brand { font-family: var(--display); font-weight: 800; font-stretch: 120%; font-size: 1.15rem; text-decoration: none; letter-spacing: -0.01em; }
+.nav { display: flex; flex-wrap: wrap; gap: 4px 22px; font-family: var(--mono); font-size: 0.8125rem; }
+.nav a { text-decoration: none; color: var(--ink-2); padding-block: 4px; }
+.nav a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+
+/* Hero */
+.hero {
+  background-image: repeating-linear-gradient(98deg, transparent 0 64px, var(--stripe) 64px 128px);
+  border-bottom: 1px solid var(--rule);
+}
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 48px; align-items: center; padding-block: clamp(40px, 7vw, 88px); }
+.hero-copy { display: grid; gap: 22px; min-width: 0; }
+.hero h1 { font-size: clamp(2.1rem, 5.4vw, 3.9rem); font-weight: 780; }
+.hero h1 em { font-style: normal; color: var(--grass); }
+.lede { font-size: 1.1875rem; color: var(--ink-2); }
+.lede strong { color: var(--ink); font-weight: 600; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; padding-top: 4px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none;
+  font-family: var(--mono); font-size: 0.875rem; font-weight: 500;
+  padding: 12px 18px; border: 1.5px solid var(--ink); border-radius: 3px;
+}
+.btn-primary { background: var(--ink); color: var(--paper); }
+.btn-primary:hover { background: var(--grass); border-color: var(--grass); }
+.btn-ghost:hover { background: var(--paper-2); }
+
+/* Spec box: the review-style panel, the only boxed element on the page */
+.spec { background: var(--paper); border: 1.5px solid var(--ink); border-radius: 4px; min-width: 0; }
+.spec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px 18px; border-bottom: 1.5px solid var(--ink); }
+.spec-head .label { color: var(--ink); font-weight: 500; }
+.spec dl { margin: 0; padding: 6px 18px 14px; font-family: var(--mono); font-size: 0.8125rem; }
+.spec .row { display: flex; align-items: baseline; gap: 8px; padding-block: 7px; border-bottom: 1px dotted var(--rule); }
+.spec .row:last-child { border-bottom: 0; }
+.spec dt { color: var(--ink-2); flex: none; }
+.spec .dots { flex: 1; }
+.spec dd { margin: 0; text-align: right; min-width: 0; }
+.verdict { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 18px; background: var(--grass); color: var(--paper); font-family: var(--mono); font-size: 0.8125rem; border-radius: 0 0 2px 2px; }
+.verdict b { font-family: var(--display); font-stretch: 115%; font-size: 1rem; letter-spacing: 0.02em; }
+
+/* Outlets strip */
+.outlets .wrap { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 28px; padding-block: 22px; border-bottom: 1px solid var(--rule); }
+.outlets ul { display: flex; flex-wrap: wrap; gap: 8px 28px; list-style: none; margin: 0; padding: 0; font-family: var(--display); font-stretch: 108%; font-weight: 650; font-size: 1rem; }
+
+/* Sections */
+section { scroll-margin-top: 16px; }
+.section { padding-block: clamp(48px, 8vw, 96px); }
+.section-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 32px; margin-bottom: 32px; }
+.section-head > div { display: grid; gap: 10px; }
+
+/* Clips */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font-family: var(--mono); font-size: 0.8125rem; color: var(--ink);
+  background: transparent; border: 1px solid var(--rule); border-radius: 999px;
+  padding: 7px 14px; cursor: pointer;
+}
+.chip:hover { border-color: var(--ink-2); }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.clips { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 0 36px; }
+.clip a { display: grid; gap: 6px; padding-block: 18px 22px; border-top: 1px solid var(--rule); text-decoration: none; height: 100%; }
+.clip-outlet { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--grass); }
+.clip-title { font-size: 1.1875rem; font-weight: 600; line-height: 1.3; text-wrap: pretty; }
+.clip-meta { font-family: var(--mono); font-size: 0.75rem; color: var(--ink-2); }
+.clip a:hover .clip-title { text-decoration: underline; text-decoration-color: var(--signal); text-underline-offset: 4px; text-decoration-thickness: 2px; }
+.clips-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-top: 20px; }
+.more { font-family: var(--mono); font-size: 0.875rem; background: none; border: 0; padding: 6px 0; color: var(--ink); text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+
+/* Radio band */
+.radio { background: var(--duck); }
+.radio .wrap { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 32px 56px; align-items: center; padding-block: clamp(44px, 7vw, 80px); }
+.radio-copy { display: grid; gap: 16px; }
+.radio .label { color: var(--ink); }
+.wave { width: 100%; height: auto; display: block; }
+.wave rect { fill: var(--ink); }
+
+/* Two-column content blocks */
+.split { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 32px 64px; }
+.split > div { display: grid; gap: 18px; align-content: start; min-width: 0; }
+.prose { display: grid; gap: 16px; }
+.services { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 28px 36px; }
+.services li { display: grid; gap: 8px; padding-top: 16px; border-top: 2px solid var(--ink); align-content: start; }
+.services p { color: var(--ink-2); font-size: 1rem; }
+.note { font-family: var(--mono); font-size: 0.8125rem; color: var(--ink-2); padding: 14px 16px; border-left: 3px solid var(--grass); background: var(--paper-2); max-width: 65ch; }
+.range { border-top: 1px solid var(--rule); }
+.pull { font-family: var(--display); font-stretch: 108%; font-weight: 650; font-size: clamp(1.3rem, 2.4vw, 1.7rem); line-height: 1.3; text-wrap: balance; }
+
+/* Contact */
+.contact { background: var(--ink); color: var(--paper); }
+.contact .wrap { display: grid; gap: 22px; padding-block: clamp(52px, 8vw, 96px); }
+.contact .label { color: var(--duck); }
+.contact h2 { font-size: clamp(1.9rem, 4.4vw, 3.1rem); }
+.email-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+.email { font-family: var(--mono); font-size: clamp(1.05rem, 3.4vw, 1.5rem); user-select: all; color: var(--paper); text-decoration-color: var(--duck); text-underline-offset: 6px; overflow-wrap: anywhere; }
+.copy { font-family: var(--mono); font-size: 0.8125rem; background: transparent; color: var(--paper); border: 1px solid var(--duck); border-radius: 3px; padding: 8px 14px; cursor: pointer; }
+.copy:hover { background: var(--paper); color: var(--ink); }
+.socials { display: flex; flex-wrap: wrap; gap: 8px 28px; list-style: none; margin: 0; padding: 0; font-family: var(--mono); font-size: 0.875rem; }
+.socials a { color: var(--paper); text-underline-offset: 4px; }
+.socials span { color: var(--duck); }
+.site-foot { background: var(--ink); color: var(--duck); border-top: 1px solid rgba(196, 220, 214, 0.2); }
+.site-foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-block: 20px; font-family: var(--mono); font-size: 0.75rem; }
+
+@media (max-width: 820px) {
+  .hero .wrap, .radio .wrap, .split { grid-template-columns: minmax(0, 1fr); }
+  .hero .wrap { gap: 36px; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top">Harry Duncton</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#brands">For brands</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="label">Home and garden technology journalist · Exeter, Devon</p>
+        <h1>If it plugs in or runs on a battery, I'll find out if it's <em>worth the money.</em></h1>
+        <p class="lede">I'm Harry Duncton. I test <strong>robot lawnmowers</strong>, garden power tools and smart home kit for BBC Gardeners' World Magazine, T3, Trusted Reviews and Grand Designs Magazine. BBC Radio 4 called me in as their robot mower expert.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">Commission me</a>
+          <a class="btn btn-ghost" href="#brands">Work with me as a brand</a>
+        </div>
+      </div>
+
+      <aside class="spec" aria-label="Test conditions">
+        <div class="spec-head"><span class="label">Test conditions</span><span class="label">Spec</span></div>
+        <dl>
+          <div class="row"><dt>Test site</dt><span class="dots"></span><dd>Sloping estuary garden</dd></div>
+          <div class="row"><dt>Terrain</dt><span class="dots"></span><dd>Roots, slopes, salt air</dd></div>
+          <div class="row"><dt>Robot mowers tested</dt><span class="dots"></span><dd>Dozens</dd></div>
+          <div class="row"><dt>Lawnmowers in the shed</dt><span class="dots"></span><dd>13</dd></div>
+          <div class="row"><dt>Copy</dt><span class="dots"></span><dd>Clean, to brief, on time</dd></div>
+        </dl>
+        <div class="verdict"><span>Verdict</span><b>RECOMMENDED</b></div>
+      </aside>
+    </div>
+  </section>
+
+  <div class="outlets" aria-label="Clients">
+    <div class="wrap">
+      <span class="label">Written for</span>
+      <ul>
+        <li>BBC Gardeners' World Magazine</li>
+        <li>T3</li>
+        <li>Trusted Reviews</li>
+        <li>Grand Designs Magazine</li>
+        <li>BBC Radio 4</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="label">Latest work</p>
+          <h2>Reviews, buying guides and features</h2>
+        </div>
+        <div class="filters" role="group" aria-label="Filter work">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-filter="robot" aria-pressed="false">Robot mowers</button>
+          <button class="chip" type="button" data-filter="review" aria-pressed="false">Reviews</button>
+          <button class="chip" type="button" data-filter="guide" aria-pressed="false">Buying guides</button>
+          <button class="chip" type="button" data-filter="feature" aria-pressed="false">Features and radio</button>
+        </div>
+      </div>
+<!--CLIPS:START-->
+<ul class="clips" id="clips" data-updated="28 Oct 2026">
+<li class="clip" data-type="feature" data-topics=""><a href="https://rfs.org.uk/about-us/rfs-awards/excellence-in-forestry-awards/" target="_blank" rel="noopener"><span class="clip-outlet">Royal Forestry Society</span><span class="clip-title">Excellence in Forestry Awards 2026: five profiles of the winners</span><span class="clip-meta">Feature · Oct 2026</span></a></li>
+<li class="clip" data-type="review" data-topics="robot"><a href="https://www.t3.com/home-living/garden/husqvarna-automower-308v-review-effortless-lawn-care-if-your-wi-fi-can-keep-up" target="_blank" rel="noopener"><span class="clip-outlet">T3</span><span class="clip-title">Husqvarna Automower 308V review</span><span class="clip-meta">Review · Apr 2026</span></a></li>
+<li class="clip" data-type="guide" data-topics="robot"><a href="https://www.gardenersworld.com/reviews/lawn-care/best-robotic-mowers/" target="_blank" rel="noopener"><span class="clip-outlet">BBC Gardeners&#x27; World Magazine</span><span class="clip-title">The best robot lawn mowers, as tested by our experts</span><span class="clip-meta">Buying guide · updated regularly</span></a></li>
+<li class="clip" data-type="review" data-topics="robot"><a href="https://www.trustedreviews.com/reviews/eufy-c15-robot-lawn-mower" target="_blank" rel="noopener"><span class="clip-outlet">Trusted Reviews</span><span class="clip-title">eufy C15 robot lawnmower review</span><span class="clip-meta">Review</span></a></li>
+<li class="clip" data-type="broadcast" data-topics="robot"><a href="https://pocketcasts.com/podcast/sliced-bread/ce09e9d0-0c60-0137-f265-1d245fc5f9cf/sliced-bread-series-17-robotic-lawnmowers/a0fd9aaa-bf3c-4db6-863f-ce5df483035b" target="_blank" rel="noopener"><span class="clip-outlet">BBC Radio 4, Sliced Bread</span><span class="clip-title">Robotic lawnmowers: do they save time without hassling hedgehogs?</span><span class="clip-meta">Radio</span></a></li>
+<li class="clip" data-type="guide" data-topics=""><a href="https://www.gardenersworld.com/reviews/lawn-care/best-cordless-lawn-mowers/" target="_blank" rel="noopener"><span class="clip-outlet">BBC Gardeners&#x27; World Magazine</span><span class="clip-title">The 12 best cordless lawn mowers, tested and rated</span><span class="clip-meta">Buying guide · updated regularly</span></a></li>
+<li class="clip" data-type="review" data-topics=""><a href="https://www.t3.com/home-living/garden/webb-wev20x2lm47spb4x-40v-lawnmower-review-this-heavyweight-mower-takes-the-hard-work-out-of-cutting-grass" target="_blank" rel="noopener"><span class="clip-outlet">T3</span><span class="clip-title">Webb 40V self-propelled lawnmower review</span><span class="clip-meta">Review</span></a></li>
+<li class="clip" data-type="review" data-topics=""><a href="https://www.trustedreviews.com/reviews/stihl-fsa-50-cordless-grass-trimmer" target="_blank" rel="noopener"><span class="clip-outlet">Trusted Reviews</span><span class="clip-title">STIHL FSA 50 cordless grass trimmer review</span><span class="clip-meta">Review</span></a></li>
+<li class="clip" data-type="review" data-topics=""><a href="https://www.trustedreviews.com/reviews/husqvarna-122ib" target="_blank" rel="noopener"><span class="clip-outlet">Trusted Reviews</span><span class="clip-title">Husqvarna 122iB leaf blower review</span><span class="clip-meta">Review</span></a></li>
+<li class="clip" data-type="guide" data-topics=""><a href="https://www.gardenersworld.com/reviews/tools/power-tools/best-leaf-blowers-vacuums/" target="_blank" rel="noopener"><span class="clip-outlet">BBC Gardeners&#x27; World Magazine</span><span class="clip-title">The best leaf blowers, as tested by our expert reviewers</span><span class="clip-meta">Buying guide · updated regularly</span></a></li>
+<li class="clip" data-type="guide" data-topics=""><a href="https://www.gardenersworld.com/reviews/tools/power-tools/best-hedge-trimmers/" target="_blank" rel="noopener"><span class="clip-outlet">BBC Gardeners&#x27; World Magazine</span><span class="clip-title">The best hedge trimmers, tested in real-world conditions</span><span class="clip-meta">Buying guide · updated regularly</span></a></li>
+<li class="clip" data-type="guide" data-topics=""><a href="https://www.gardenersworld.com/reviews/lawn-care/the-best-lawn-scarifiers-from-manual-to-mechanical-machines-2/" target="_blank" rel="noopener"><span class="clip-outlet">BBC Gardeners&#x27; World Magazine</span><span class="clip-title">The best lawn scarifiers to buy</span><span class="clip-meta">Buying guide · updated regularly</span></a></li>
+<li class="clip" data-type="guide" data-topics=""><a href="https://www.gardenersworld.com/reviews/lawn-care/best-grass-trimmers/" target="_blank" rel="noopener"><span class="clip-outlet">BBC Gardeners&#x27; World Magazine</span><span class="clip-title">The best grass trimmers</span><span class="clip-meta">Buying guide · updated regularly</span></a></li>
+<li class="clip" data-type="guide" data-topics=""><a href="https://www.gardenersworld.com/reviews/lawn-care/best-lawn-mowers/" target="_blank" rel="noopener"><span class="clip-outlet">BBC Gardeners&#x27; World Magazine</span><span class="clip-title">The best lawn mowers, tested and rated</span><span class="clip-meta">Buying guide · updated regularly</span></a></li>
+<li class="clip" data-type="guide" data-topics=""><a href="https://www.gardenersworld.com/reviews/tools/power-tools/pressure-washers-buyers-guide/" target="_blank" rel="noopener"><span class="clip-outlet">BBC Gardeners&#x27; World Magazine</span><span class="clip-title">The best pressure washers, as actually tested</span><span class="clip-meta">Buying guide · updated regularly</span></a></li>
+<li class="clip" data-type="guide" data-topics=""><a href="https://www.gardenersworld.com/reviews/tools/power-tools/the-best-shredders/" target="_blank" rel="noopener"><span class="clip-outlet">BBC Gardeners&#x27; World Magazine</span><span class="clip-title">The best garden shredders</span><span class="clip-meta">Buying guide · updated regularly</span></a></li>
+<li class="clip" data-type="review" data-topics="robot"><a href="https://www.gardenersworld.com/reviews/flymo-easilife-go-500-review/" target="_blank" rel="noopener"><span class="clip-outlet">BBC Gardeners&#x27; World Magazine</span><span class="clip-title">Flymo EasiLife Go 500 robotic mower review</span><span class="clip-meta">Review</span></a></li>
+</ul>
+<!--CLIPS:END-->
+      <div class="clips-foot">
+        <button class="more" type="button" id="more" hidden>Show all work</button>
+        <span class="label" id="updated"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="radio" aria-labelledby="radio-h">
+    <div class="wrap">
+      <svg class="wave" viewBox="0 0 400 90" role="img" aria-label="Audio waveform">
+        <g id="bars"></g>
+      </svg>
+      <div class="radio-copy">
+        <p class="label">On air · BBC Radio 4, Sliced Bread</p>
+        <h2 id="radio-h">Do robot mowers save time, and what happens to the hedgehogs?</h2>
+        <p>Sliced Bread put that question to me as their robot mower expert, alongside hedgehog researcher Dr Sophie Lund-Rasmussen. I cover what the adverts don't: edges, borders, slopes and wildlife.</p>
+        <p><a class="btn btn-primary" href="https://pocketcasts.com/podcast/sliced-bread/ce09e9d0-0c60-0137-f265-1d245fc5f9cf/sliced-bread-series-17-robotic-lawnmowers/a0fd9aaa-bf3c-4db6-863f-ce5df483035b" target="_blank" rel="noopener">Listen to the episode</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="brands">
+    <div class="wrap split">
+      <div>
+        <p class="label">For brands</p>
+        <h2>I know what editors want, because they commission me.</h2>
+        <p>That's useful if you're launching a robot mower, a cordless tool or anything else for the home and garden. I can help you say it clearly, and tell you honestly how it will land.</p>
+      </div>
+      <div>
+        <ul class="services">
+          <li>
+            <h3>Copywriting</h3>
+            <p>Product pages, launch copy, guides and manuals, written by someone who has mown a real lawn with the thing.</p>
+          </li>
+          <li>
+            <h3>Press and pitch consultancy</h3>
+            <p>Honest feedback on your product and your pitch before it goes out, and help shaping a story an editor will open. I don't promise coverage.</p>
+          </li>
+          <li>
+            <h3>Video and social</h3>
+            <p>Partnership content on Beard Reviews Tech across YouTube and Instagram, always clearly labelled.</p>
+          </li>
+          <li>
+            <h3>Expert commentary</h3>
+            <p>Radio, podcasts, panels and events on robot mowers and garden tech.</p>
+          </li>
+        </ul>
+        <p class="note">Paid work is always labelled and never buys a review verdict. Editors can trust my reviews, which is what makes my name worth having on your launch.</p>
+        <p><a class="btn btn-ghost" href="#contact">Talk about a project</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section range" id="about">
+    <div class="wrap split">
+      <div>
+        <p class="label">About</p>
+        <h2>The spec sheet tells you what it does on a good day.</h2>
+        <p class="pull">I tell you what it's like on a real one, when wind, rain and drought get in the way.</p>
+      </div>
+      <div class="prose">
+        <p>My job is to find the next useful piece of home and garden tech, test it properly and write about it in a way people want to read. Robot lawnmowers are my specialism. Over the past few years I've tested dozens of them on a sloping estuary garden full of roots and salt air, plus a couple of friends' lawns that would defeat most mowers. None of them is as forgiving as a manufacturer's demo lawn.</p>
+        <p>The best home and garden tech gives you your time back, so I'll tell you if it takes a degree in computer science to get it working. I don't have one either.</p>
+        <p>I came to journalism the long way round: testing computer games, teaching English as a foreign language, managing content and felling larch in Scotland. That mix is why I can take a 40-page technical manual and turn it into 500 words a reader might enjoy, and why my work isn't only about robots. This year the Royal Forestry Society commissioned me to profile the winners of its Excellence in Forestry Awards.</p>
+        <p>Editors like me because I know the products and the industry well enough to explain what matters to a reader, and I file clean copy to brief and on time. I'm also the person people text before they spend a grand on a robot mower.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <p class="label">Contact</p>
+      <h2 id="contact-h">Commissions, brand projects and interview requests</h2>
+      <div class="email-row">
+        <a class="email" id="email" href="mailto:harry@harryduncton.com">harry@harryduncton.com</a>
+        <button class="copy" type="button" id="copy">Copy address</button>
+      </div>
+      <ul class="socials">
+        <li><span>YouTube</span> <a href="https://www.youtube.com/@beard.reviews" target="_blank" rel="noopener">@beard.reviews</a></li>
+        <li><span>Instagram</span> <a href="https://www.instagram.com/beard.reviews.tech" target="_blank" rel="noopener">@beard.reviews.tech</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>© 2026 Harry Duncton</span>
+    <span>Exeter, Devon</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var list = document.getElementById('clips');
+  var items = Array.prototype.slice.call(list.querySelectorAll('.clip'));
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var more = document.getElementById('more');
+  var LIMIT = 9, expanded = false, current = 'all';
+
+  var updated = list.getAttribute('data-updated');
+  if (updated) document.getElementById('updated').textContent = 'Updated automatically · ' + updated;
+
+  function matches(li, f) {
+    if (f === 'all') return true;
+    if (f === 'robot') return (' ' + li.dataset.topics + ' ').indexOf(' robot ') > -1;
+    if (f === 'feature') return li.dataset.type === 'feature' || li.dataset.type === 'broadcast';
+    return li.dataset.type === f;
+  }
+  function render() {
+    var shown = 0, total = 0;
+    items.forEach(function (li) {
+      var ok = matches(li, current);
+      if (ok) total++;
+      li.hidden = !ok || (!expanded && shown >= LIMIT);
+      if (ok && !li.hidden) shown++;
+    });
+    more.hidden = expanded || total <= LIMIT;
+    more.textContent = 'Show all ' + total;
+  }
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      current = c.dataset.filter;
+      chips.forEach(function (x) { x.setAttribute('aria-pressed', String(x === c)); });
+      render();
+    });
+  });
+  more.addEventListener('click', function () { expanded = true; render(); });
+  render();
+
+  // Waveform for the radio band, drawn once
+  var g = document.getElementById('bars'), seed = 7, n = 64, w = 400 / n;
+  for (var i = 0; i < n; i++) {
+    seed = (seed * 9301 + 49297) % 233280;
+    var env = Math.sin(Math.PI * i / n) * 0.75 + 0.25;
+    var h = Math.max(4, (seed / 233280) * 84 * env);
+    var r = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    r.setAttribute('x', (i * w + 1).toFixed(2));
+    r.setAttribute('y', ((90 - h) / 2).toFixed(2));
+    r.setAttribute('width', (w - 2.5).toFixed(2));
+    r.setAttribute('height', h.toFixed(2));
+    r.setAttribute('rx', '1.5');
+    g.appendChild(r);
+  }
+
+  // Copy email
+  var btn = document.getElementById('copy');
+  btn.addEventListener('click', function () {
+    var text = 'harry@harryduncton.com';
+    function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy address'; }, 1800); }
+    function fallback() {
+      var range = document.createRange();
+      range.selectNodeContents(document.getElementById('email'));
+      var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range);
+      btn.textContent = 'Selected, press copy';
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } else { fallback(); }
+  });
+})();
+</script>
+</body>
+</html>
