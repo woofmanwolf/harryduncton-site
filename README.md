@@ -13,6 +13,10 @@ You'll need a laptop or desktop for the setup. Allow about 45 minutes, plus up t
 | `data/feeds.json` | Where the daily job looks for new clips |
 | `scripts/update_clips.py` | The daily job |
 | `.github/workflows/update-clips.yml` | Tells GitHub to run the job every morning |
+| `launch/` | The UK Launch Playbook page, plus the short film used there and in About |
+| `assets/fonts/`, `assets/img/` | The site's fonts and the hero photo in web sizes. Nothing loads from Google |
+| `og-image.jpg` | The picture that appears when someone shares your link |
+| `404.html`, `robots.txt`, `sitemap.xml` | The "page not found" page and two small files for search engines |
 
 ## 1. Make a GitHub account
 
@@ -64,7 +68,7 @@ From now on it runs every morning at about 7am UK time.
 
 ## 8. Before you share it
 
-- **Add a share image.** Upload a 1200 x 630 pixel photo called `og-image.jpg` (you with a mower in the garden is ideal). It's what appears when someone shares your link.
+- **Share image.** `og-image.jpg` is in place. To change it, upload another 1200 x 630 pixel image with the same name.
 - **Check these lines are still true**: "13 lawnmowers in the shed" (taken from your T3 bio), and the brand note "paid work is always labelled and never buys a review verdict".
 - **Swap two links** in `data/manual.json` and `index.html` if you have better ones: the Radio 4 episode currently links to Pocket Casts (a BBC Sounds link is better), and the RFS entry links to the awards page rather than your articles.
 - **Add LinkedIn** to the contact section if you want it there.
@@ -72,6 +76,8 @@ From now on it runs every morning at about 7am UK time.
 
 ## Day to day
 
+- **Choose the three big clips:** the large row at the top of Work shows every clip in `data/manual.json` marked `"featured": true`, in the order they appear in the file. Keep it to three. Add a `"note"` line for the sentence under the title. To swap one out, delete those two lines from the old clip and add them to the new one.
+- **Change the hero photo:** the photo lives in `assets/img/` in three formats and two sizes. Ask Claude to regenerate them from a new photo so the page stays fast.
 - **Add a clip by hand:** open `data/manual.json` on GitHub, click the pencil, copy an existing entry, change the details, commit. It appears after the next morning run, or straight away if you click **Run workflow**.
 - **Check the waiting list:** anything the alert finds on a site outside your usual outlets goes into `data/review.json` instead of the homepage, so a random blog quoting you never appears by mistake. If one is genuinely your work, copy it into `manual.json`. To trust a new outlet permanently, add its domain to `allow_domains` in `feeds.json`.
 - **Edit the words:** open `index.html`, click the pencil, change the text, commit. The live site updates within a couple of minutes.

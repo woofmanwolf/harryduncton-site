@@ -185,23 +185,27 @@ def merge(manual, found, new):
 
 
 def ordered(clips):
-    dated = sorted([c for c in clips if c.get("date")], key=lambda c: c["date"], reverse=True)
-    return dated + [c for c in clips if not c.get("date")]
+    """Featured clips first (in manual.json order), then newest, then undated."""
+    lead = [c for c in clips if c.get("featured")]
+    rest = [c for c in clips if not c.get("featured")]
+    dated = sorted([c for c in rest if c.get("date")], key=lambda c: c["date"], reverse=True)
+    return lead + dated + [c for c in rest if not c.get("date")]
 
 
 def card(clip):
     esc = lambda s: html.escape(s or "", quote=True)
-    meta = TYPE_LABELS.get(clip.get("type"), "Article")
+    meta = f'<span>{esc(TYPE_LABELS.get(clip.get("type"), "Article"))}</span>'
     if clip.get("date"):
-        meta += " · " + datetime.fromisoformat(clip["date"]).strftime("%b %Y")
-    elif clip.get("type") == "guide":
-        meta += " · updated regularly"
-    return (f'<li class="clip" data-type="{esc(clip.get("type"))}" '
+        meta += f'<span>{datetime.fromisoformat(clip["date"]).strftime("%b %Y")}</span>'
+    lead = " clip-lead" if clip.get("featured") else ""
+    note = (f'<span class="clip-note">{esc(clip["note"])}</span>'
+            if clip.get("featured") and clip.get("note") else "")
+    return (f'<li class="clip{lead}" data-type="{esc(clip.get("type"))}" '
             f'data-topics="{esc(" ".join(clip.get("topics", [])))}">'
             f'<a href="{esc(clip["url"])}" target="_blank" rel="noopener">'
             f'<span class="clip-outlet">{esc(clip.get("outlet"))}</span>'
-            f'<span class="clip-title">{esc(clip["title"])}</span>'
-            f'<span class="clip-meta">{esc(meta)}</span></a></li>')
+            f'<span class="clip-title">{esc(clip["title"])}</span>{note}'
+            f'<span class="clip-meta">{meta}</span></a></li>')
 
 
 def write_index(clips):
