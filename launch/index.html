@@ -171,7 +171,7 @@ h3,nav,footer,.strip,a[style*="inline-flex"]{font-family:Archivo,"Arial Narrow",
 </section>
 
 <section style="max-width: 1120px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
-<video autoplay muted loop playsinline preload="metadata" poster="harry-poster.jpg" aria-label="Harry Duncton crouched beside a robot mower at its dock, setting it up on his phone" style="flex: 1 1 280px; max-width: 360px; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; display: block; background: #E3ECE6"><source src="harry-loop.webm" type="video/webm"><source src="harry-loop.mp4" type="video/mp4"></video>
+<figure style="flex: 1 1 280px; max-width: 360px; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; overflow: hidden; background: #E3ECE6; position: relative; margin: 0"><video muted loop playsinline preload="metadata" poster="harry-poster.jpg" aria-label="Harry Duncton crouched beside a robot mower at its dock, setting it up on his phone" id="film" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover"><source src="harry-loop.webm" type="video/webm"><source src="harry-loop.mp4" type="video/mp4"></video><button type="button" id="film-toggle" style="position: absolute; right: 10px; bottom: 10px; font-family: Archivo, Arial, sans-serif; font-weight: 650; font-size: 13px; color: #F2F5F2; background: rgba(21, 33, 28, 0.78); border: 0; border-radius: 3px; padding: 7px 11px; cursor: pointer">Play</button></figure>
 <div style="flex: 999 1 480px; min-width: 0">
 <h2 style="margin: 0; font-family: Archivo, 'Arial Narrow', Arial, sans-serif; font-stretch: 112%; letter-spacing: -0.012em; font-weight: 760; font-size: 34px; line-height: 1.1">About me</h2>
 <p style="margin: 20px 0 0; color: #4B5C54">I'm Harry Duncton, a freelance technology journalist based in Exeter, Devon. I write about garden and home tech for BBC Gardeners' World Magazine, T3, Trusted Reviews and Grand Designs Magazine, and I've been on BBC Radio 4's Sliced Bread as a robot mower expert.</p>
@@ -207,9 +207,16 @@ h3,nav,footer,.strip,a[style*="inline-flex"]{font-family:Archivo,"Arial Narrow",
 
 </div>
 <script>
-if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  document.querySelectorAll('video[autoplay]').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
-}
+(function () {
+  // Plays by itself unless the device asks for reduced motion or the browser blocks autoplay; then it waits for Play.
+  var film = document.getElementById('film'), toggle = document.getElementById('film-toggle');
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function play() { var p = film.play(); if (p && p.catch) p.catch(function () {}); }
+  film.addEventListener('play', function () { toggle.textContent = 'Pause'; });
+  film.addEventListener('pause', function () { toggle.textContent = 'Play'; });
+  toggle.addEventListener('click', function () { if (film.paused) play(); else film.pause(); });
+  if (!still) play();
+})();
 </script>
 </body>
 </html>

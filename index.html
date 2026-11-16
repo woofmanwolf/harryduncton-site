@@ -377,6 +377,24 @@ section { scroll-margin-top: 76px; }
     </div>
   </section>
 
+  <section class="news" id="newsletter" aria-labelledby="news-h">
+    <div class="wrap">
+      <div class="news-copy">
+        <p class="label">Newsletter</p>
+        <h2 id="news-h">Beard In The Wild</h2>
+        <p>Garden tool reviews, how-tos and home technology advice, in your inbox every other week.</p>
+      </div>
+      <form class="news-form" id="news-form" action="https://app.kit.com/forms/9193655/subscriptions" method="post" target="_blank">
+        <label class="label" for="news-email">Email address</label>
+        <div class="news-row">
+          <input id="news-email" name="email_address" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
+          <button class="btn btn-primary" type="submit">Sign up</button>
+        </div>
+        <p class="news-note" id="news-note" role="status">No spam. Unsubscribe whenever you like.</p>
+      </form>
+    </div>
+  </section>
+
   <section class="section" id="brands">
     <div class="wrap split">
       <div class="split-side stick">
@@ -439,24 +457,6 @@ section { scroll-margin-top: 76px; }
         <p>I came to journalism the long way round: testing computer games, teaching English as a foreign language, managing content, and felling larch in Scotland. That mix is why I can take a 40-page technical manual and turn it into 500 words a reader might enjoy, and why my work isn't only about robots. This year the Royal Forestry Society commissioned me to profile the winners of its Excellence in Forestry Awards.</p>
         <p>Editors come back because I know the products and the industry well enough to explain what matters to a reader, and I file clean copy to brief and on time. I'm also the person people text before they spend a grand on a robot mower.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="news" id="newsletter" aria-labelledby="news-h">
-    <div class="wrap">
-      <div class="news-copy">
-        <p class="label">Newsletter</p>
-        <h2 id="news-h">Beard In The Wild</h2>
-        <p>Garden tool reviews, how-tos and home technology advice, in your inbox every other week.</p>
-      </div>
-      <form class="news-form" id="news-form" action="https://app.kit.com/forms/9193655/subscriptions" method="post" target="_blank">
-        <label class="label" for="news-email">Email address</label>
-        <div class="news-row">
-          <input id="news-email" name="email_address" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" required>
-          <button class="btn btn-primary" type="submit">Sign up</button>
-        </div>
-        <p class="news-note" id="news-note" role="status">No spam. Unsubscribe whenever you like.</p>
-      </form>
     </div>
   </section>
 
@@ -530,26 +530,29 @@ section { scroll-margin-top: 76px; }
   more.addEventListener('click', function () { expanded = true; render(); });
   render();
 
-  // About film: load only when it scrolls into view, never for reduced motion
+  // About film: loads when it scrolls into view. It plays by itself unless the visitor's
+  // device asks for reduced motion, or the browser blocks autoplay; then it waits for Play.
   var film = document.getElementById('film'), toggle = document.getElementById('film-toggle');
   var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function startFilm() {
+  var loaded = false;
+  function loadFilm() {
+    if (loaded) return; loaded = true;
     Array.prototype.forEach.call(film.querySelectorAll('source'), function (s) { s.src = s.getAttribute('data-src'); });
     film.load();
-    var p = film.play();
-    if (p && p.catch) p.catch(function () {});
-    toggle.hidden = false;
   }
-  toggle.addEventListener('click', function () {
-    if (film.paused) { film.play(); toggle.textContent = 'Pause'; }
-    else { film.pause(); toggle.textContent = 'Play'; }
-  });
-  if (!still && 'IntersectionObserver' in window) {
+  function play() { loadFilm(); var p = film.play(); if (p && p.catch) p.catch(function () {}); }
+  film.addEventListener('play', function () { toggle.textContent = 'Pause'; });
+  film.addEventListener('pause', function () { toggle.textContent = 'Play'; });
+  toggle.textContent = 'Play';
+  toggle.hidden = false;
+  toggle.addEventListener('click', function () { if (film.paused) play(); else film.pause(); });
+  if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
-      if (entries[0].isIntersecting) { io.disconnect(); startFilm(); }
+      if (!entries[0].isIntersecting) return;
+      io.disconnect(); loadFilm(); if (!still) play();
     }, { rootMargin: '300px' });
     io.observe(film);
-  }
+  } else if (!still) { play(); }
 
   // Newsletter: sign up without leaving the page; if that fails, hand over to Kit's own page
   var nf = document.getElementById('news-form'), note = document.getElementById('news-note');
